@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<robot name="simple_mockup">
+  <link name="base_link" />
+
+    <link name="bar_hor">
+    <visual>
+      <geometry>
+        <mesh filename="package://simple_mockup_description/meshes/simple_mockup/bar_hor.dae" />
+      </geometry>
+      <material name="default">
+        <color rgba="1.0 1.0 1.0 1" />
+      </material>
+    </visual>
+
+  </link>
+  <joint name="bar_hor" type="fixed">
+    <parent link="base_link" />
+    <child link="bar_hor" />
+    <origin rpy="1.5707963705062866 0.0 0.0" xyz="0.0 0.0 5.960464477539063e-08" />
+  </joint>
+
+  <link name="bar_inc">
+    <visual>
+      <geometry>
+        <mesh filename="package://simple_mockup_description/meshes/simple_mockup/bar_inc.dae" />
+      </geometry>
+      <material name="default">
+        <color rgba="1.0 1.0 1.0 1" />
+      </material>
+    </visual>
+
+  </link>
+  <joint name="bar_inc" type="fixed">
+    <parent link="base_link" />
+    <child link="bar_inc" />
+    <origin rpy="1.5707963705062866 -0.7853981852531433 0.0" xyz="0.0 -2.9802322387695312e-08 0.0" />
+  </joint>
+
+  <link name="bar_ver">
+    <visual>
+      <geometry>
+        <mesh filename="package://simple_mockup_description/meshes/simple_mockup/bar_ver.dae" />
+      </geometry>
+      <material name="default">
+        <color rgba="1.0 1.0 1.0 1" />
+      </material>
+    </visual>
+
+  </link>
+  <joint name="bar_ver" type="fixed">
+    <parent link="base_link" />
+    <child link="bar_ver" />
+    <origin rpy="1.5707963705062866 0.0 0.0" xyz="5.960464477539063e-08 -2.9802322387695312e-08 0.0" />
+  </joint>
+
+  <link name="wall">
+    <visual>
+      <geometry>
+        <mesh filename="package://simple_mockup_description/meshes/simple_mockup/wall.dae" />
+      </geometry>
+      <material name="default">
+        <color rgba="1.0 1.0 1.0 1" />
+      </material>
+    </visual>
+
+  </link>
+  <joint name="wall" type="fixed">
+    <parent link="base_link" />
+    <child link="wall" />
+    <origin rpy="1.5707963705062866 0.0 0.0" xyz="0.0 0.0 0.0" />
+  </joint>
+
+</robot>

@@ -1,0 +1,12 @@
+<package>                                                                     
+  <name>simple_mockup_description</name>
+  <version>1.0.0</version>
+  <description>Description package for simple mockup</description>
+  <author>Yili Qin</author>
+  <maintainer email="yili.jrl@gmail.com">Yili Qin</maintainer>
+  <license>BSD</license>
+  <url>https://github.com/YiliQin/simple_mockup_description.git</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
+

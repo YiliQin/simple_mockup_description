@@ -1,0 +1,2 @@
+simple_mockup_env: [env, "@SIMPLE_MOCKUP_LOCATION@", simple_mockup]
+simple_mockup: [object, "@SIMPLE_MOCKUP_LOCATION@", simple_mockup]
