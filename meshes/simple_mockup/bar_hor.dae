@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.79.0</authoring_tool>
     </contributor>
-    <created>2022-08-09T13:34:29</created>
-    <modified>2022-08-09T13:34:29</modified>
+    <created>2022-08-12T09:58:50</created>
+    <modified>2022-08-12T09:58:50</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -51,7 +51,7 @@
     <geometry id="bar_hor_Cube_008-mesh" name="bar_hor_Cube.008">
       <mesh>
         <source id="bar_hor_Cube_008-mesh-positions">
-          <float_array id="bar_hor_Cube_008-mesh-positions-array" count="24">0.581216 0.710155 -0.26156 0.581216 0.740155 -0.29156 0.581216 0.710155 -0.29156 0.581216 0.740155 -0.26156 0.80856 0.740155 -0.29156 0.80856 0.740155 -0.26156 0.80856 0.710155 -0.29156 0.80856 0.710155 -0.26156</float_array>
+          <float_array id="bar_hor_Cube_008-mesh-positions-array" count="24">0.581216 0.665 -0.26156 0.581216 0.695 -0.29156 0.581216 0.665 -0.29156 0.581216 0.695 -0.26156 0.80856 0.695 -0.29156 0.80856 0.695 -0.26156 0.80856 0.665 -0.29156 0.80856 0.665 -0.26156</float_array>
           <technique_common>
             <accessor source="#bar_hor_Cube_008-mesh-positions-array" count="8" stride="3">
               <param name="X" type="float"/>

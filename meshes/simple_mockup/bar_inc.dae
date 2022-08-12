@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.79.0</authoring_tool>
     </contributor>
-    <created>2022-08-09T13:34:30</created>
-    <modified>2022-08-09T13:34:30</modified>
+    <created>2022-08-12T09:58:53</created>
+    <modified>2022-08-12T09:58:53</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -51,7 +51,7 @@
     <geometry id="bar_inc_Cube_007-mesh" name="bar_inc_Cube.007">
       <mesh>
         <source id="bar_inc_Cube_007-mesh-positions">
-          <float_array id="bar_inc_Cube_007-mesh-positions-array" count="24">1.073704 -0.07015699 -0.26156 1.094918 -0.04894399 -0.29156 1.073704 -0.07015699 -0.29156 1.094918 -0.04894399 -0.26156 1.174491 -0.04613095 -0.29156 1.174491 -0.04613095 -0.26156 1.195704 -0.067344 -0.29156 1.195704 -0.067344 -0.26156</float_array>
+          <float_array id="bar_inc_Cube_007-mesh-positions-array" count="24">1.041881 -0.101981 -0.26156 1.063094 -0.08076798 -0.29156 1.041881 -0.101981 -0.29156 1.063094 -0.08076798 -0.26156 1.142667 -0.077955 -0.29156 1.142667 -0.077955 -0.26156 1.16388 -0.099168 -0.29156 1.16388 -0.099168 -0.26156</float_array>
           <technique_common>
             <accessor source="#bar_inc_Cube_007-mesh-positions-array" count="8" stride="3">
               <param name="X" type="float"/>
@@ -61,7 +61,7 @@
           </technique_common>
         </source>
         <source id="bar_inc_Cube_007-mesh-normals">
-          <float_array id="bar_inc_Cube_007-mesh-normals-array" count="66">-0.7070897 0.7071239 0 -0.7070893 0.7071244 0 -0.03532904 0.9993758 0 -0.0353291 0.9993758 0 -0.03532898 0.9993758 0 0.7071081 0.7071055 0 0.7071099 0.7071037 0 0.0230512 -0.9997343 0 0.0230512 -0.9997343 0 0.02305114 -0.9997344 0 2.51326e-7 0 -1 0 0 -1 2.76268e-7 0 -1 1.73774e-7 0 1 4.33467e-7 0 1 5.32898e-7 0 1 -0.7070903 0.7071234 0 -0.03532916 0.9993758 0 0.7071063 0.7071073 0 0.0230512 -0.9997344 0 0 0 -1 1.38134e-7 0 1</float_array>
+          <float_array id="bar_inc_Cube_007-mesh-normals-array" count="66">-0.707106 0.7071076 0 -0.7071058 0.7071079 0 -0.03532904 0.9993758 0 -0.03532898 0.9993758 0 -0.03532904 0.9993758 0 0.7071081 0.7071055 0 0.7071058 0.7071079 0 0.02305138 -0.9997343 0 0.02305138 -0.9997343 0 0.02305138 -0.9997344 0 0 0 -1 0 0 -1 0 0 -1 -1.61329e-7 0 1 3.40686e-7 0 1 5.32898e-7 0 1 -0.7071063 0.7071073 0 -0.03532898 0.9993758 0 0.7071104 0.7071031 0 0.02305138 -0.9997344 0 0 0 -1 -2.30225e-7 0 1</float_array>
           <technique_common>
             <accessor source="#bar_inc_Cube_007-mesh-normals-array" count="22" stride="3">
               <param name="X" type="float"/>
