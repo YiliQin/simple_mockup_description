@@ -1,47 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <asset>
     <contributor>
       <author>Blender User</author>
-      <authoring_tool>Blender 2.79.0</authoring_tool>
+      <authoring_tool>Blender 2.82.7</authoring_tool>
     </contributor>
-    <created>2022-08-12T09:58:57</created>
-    <modified>2022-08-12T09:58:57</modified>
+    <created>2023-05-09T13:14:22</created>
+    <modified>2023-05-09T13:14:22</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
-  <library_images/>
   <library_effects>
     <effect id="None-effect">
       <profile_COMMON>
         <technique sid="common">
-          <phong>
+          <lambert>
             <emission>
               <color sid="emission">0 0 0 1</color>
             </emission>
-            <ambient>
-              <color sid="ambient">0 0 0 1</color>
-            </ambient>
             <diffuse>
               <color sid="diffuse">0.8 0.8 0.8 1</color>
             </diffuse>
-            <specular>
-              <color sid="specular">0.8 0.8 0.8 1</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">1</float>
-            </shininess>
-            <transparent opaque="A_ONE">
-              <color>1 1 1 1</color>
-            </transparent>
             <index_of_refraction>
-              <float sid="index_of_refraction">1</float>
+              <float sid="ior">1</float>
             </index_of_refraction>
-          </phong>
+          </lambert>
         </technique>
       </profile_COMMON>
     </effect>
   </library_effects>
+  <library_images/>
   <library_materials>
     <material id="None-material" name="None">
       <instance_effect url="#None-effect"/>
@@ -51,7 +39,7 @@
     <geometry id="wall_Cube_005-mesh" name="wall_Cube.005">
       <mesh>
         <source id="wall_Cube_005-mesh-positions">
-          <float_array id="wall_Cube_005-mesh-positions-array" count="24">3e-6 0.002486944 -0.274969 0.579942 0.002486944 -0.314969 0.579942 0.002486944 -0.274969 0.579942 1.809487 -0.274969 0.579942 1.809487 -0.314969 3e-6 1.809487 -0.274969 3e-6 1.809487 -0.314969 3e-6 0.002486944 -0.314969</float_array>
+          <float_array id="wall_Cube_005-mesh-positions-array" count="24">-0.274969 2.98798e-6 0.002486944 -0.314969 0.579942 0.002486944 -0.2749691 0.579942 0.002486944 -0.2749689 0.579942 1.809487 -0.314969 0.579942 1.809487 -0.2749689 2.98798e-6 1.809487 -0.3149689 2.98623e-6 1.809487 -0.314969 2.98623e-6 0.002486944</float_array>
           <technique_common>
             <accessor source="#wall_Cube_005-mesh-positions-array" count="8" stride="3">
               <param name="X" type="float"/>
@@ -61,9 +49,9 @@
           </technique_common>
         </source>
         <source id="wall_Cube_005-mesh-normals">
-          <float_array id="wall_Cube_005-mesh-normals-array" count="18">0 -1 0 1 0 0 0 0 1 -1 0 0 0 1 0 0 0 -1</float_array>
+          <float_array id="wall_Cube_005-mesh-normals-array" count="27">0 0 -1 0 1 0 1 0 0 0 -1 0 0 0 1 -1 0 0 0 1 0 1 0 0 0 -1 0</float_array>
           <technique_common>
-            <accessor source="#wall_Cube_005-mesh-normals-array" count="6" stride="3">
+            <accessor source="#wall_Cube_005-mesh-normals-array" count="9" stride="3">
               <param name="X" type="float"/>
               <param name="Y" type="float"/>
               <param name="Z" type="float"/>
@@ -76,16 +64,15 @@
         <triangles material="None-material" count="12">
           <input semantic="VERTEX" source="#wall_Cube_005-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#wall_Cube_005-mesh-normals" offset="1"/>
-          <p>0 0 1 0 2 0 3 1 1 1 4 1 0 2 3 2 5 2 0 3 6 3 7 3 6 4 3 4 4 4 6 5 1 5 7 5 0 0 7 0 1 0 3 1 2 1 1 1 0 2 2 2 3 2 0 3 5 3 6 3 6 4 5 4 3 4 6 5 4 5 1 5</p>
+          <p>0 0 1 0 2 0 3 1 1 1 4 1 0 2 3 2 5 2 0 3 6 3 7 3 6 4 3 4 4 4 6 5 1 5 7 5 0 0 7 0 1 0 3 6 2 6 1 6 0 7 2 7 3 7 0 8 5 8 6 8 6 4 5 4 3 4 6 5 4 5 1 5</p>
         </triangles>
       </mesh>
     </geometry>
   </library_geometries>
-  <library_controllers/>
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="wall_Cube_005" name="wall_Cube_005" type="NODE">
-        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <matrix sid="transform">0 1 0 0 -1 0 0 0 0 0 1 0 0 0 0 1</matrix>
         <instance_geometry url="#wall_Cube_005-mesh" name="wall_Cube_005">
           <bind_material>
             <technique_common>
