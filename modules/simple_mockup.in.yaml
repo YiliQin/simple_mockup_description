@@ -1,0 +1,31 @@
+# Location of data files, all path in the YAML file are
+# interpreted relative to this path unless they are absolute paths
+path: "@SIMPLE_MOCKUP_LOCATION@"
+name: simple_mockup
+urdf_path: "urdf/simple_mockup.urdf"
+fixed: true
+
+convexHulls:
+  bar_hor:
+    - bar_hor
+    - "@SIMPLE_MOCKUP_LOCATION@/convex/simple_mockup/bar_hor-ch.txt"
+  bar_ver:
+    - bar_ver
+    - "@SIMPLE_MOCKUP_LOCATION@/convex/simple_mockup/bar_ver-ch.txt"
+  bar_inc:
+    - bar_inc
+    - "@SIMPLE_MOCKUP_LOCATION@/convex/simple_mockup/bar_inc-ch.txt"
+  wall:
+    - wall
+    - "@SIMPLE_MOCKUP_LOCATION@/convex/simple_mockup/wall-ch.txt"
+collisionObjects:
+  LowerBox:
+    - base_link
+    - type: box
+      width: 0.65
+      height: 0.72 # top of the highest bar
+      depth: 0.62
+collisionTransforms:
+  LowerBox:
+    translation: [0.9, 0., 0.35]
+    rotation: [1.57, 0, 0]

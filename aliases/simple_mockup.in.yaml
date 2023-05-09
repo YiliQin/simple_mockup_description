@@ -1,0 +1,1 @@
+simple_mockup_env: [json, "@SIMPLE_MOCKUP_INSTALL_LOCATION@/modules/simple_mockup.yaml"]

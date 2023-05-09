@@ -34,25 +34,14 @@ else()
   install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake" DESTINATION "${CONFIG_INSTALL_DIR}")
 
   set(SIMPLE_MOCKUP_MESHES_LOCATION "file://${CMAKE_INSTALL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes")
-
 endif()
 
-set(ALIASE_OUT "${CMAKE_CURRENT_BINARY_DIR}/aliase/simple_mockup.yaml")
-set(SIMPLE_MOCKUP_LOCATION "${CMAKE_INSTALL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}")
-configure_file(aliase/simple_mockup.in.yaml "${ALIASE_OUT}")
-
-set(LOCAL_ALIASE "$ENV{HOME}/.config/mc_rtc/aliases/simple_mockup.yaml")
+set(ALIAS_OUT "${CMAKE_CURRENT_BINARY_DIR}/aliases/simple_mockup.yaml")
 set(SIMPLE_MOCKUP_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}")
-configure_file(aliase/simple_mockup.in.yaml "${LOCAL_ALIASE}")
+set(SIMPLE_MOCKUP_INSTALL_LOCATION "${CMAKE_INSTALL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}")
+configure_file(aliases/simple_mockup.in.yaml "${ALIAS_OUT}")
 
-install(FILES "${ALIASE_OUT}" DESTINATION "${MC_ROBOTS_ALIASES_DIRECTORY}")
-install(CODE "file(REMOVE ${LOCAL_ALIASE})")
+set(LOCAL_MODULE "$ENV{HOME}/.config/mc_rtc/modules/simple_mockup.yaml")
+configure_file(modules/simple_mockup.in.yaml "${SIMPLE_MOCKUP_INSTALL_LOCATION}/modules/simple_mockup.yaml")
 
-install(DIRECTORY convex/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/convex)
-install(DIRECTORY meshes/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes)
-install(DIRECTORY rsdf/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rsdf)
-install(FILES urdf/simple_mockup.urdf
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/urdf)
+install(FILES "${ALIAS_OUT}" DESTINATION "${MC_ROBOTS_ALIASES_DIRECTORY}")
