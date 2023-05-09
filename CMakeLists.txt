@@ -41,7 +41,8 @@ set(SIMPLE_MOCKUP_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}")
 set(SIMPLE_MOCKUP_INSTALL_LOCATION "${CMAKE_INSTALL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}")
 configure_file(aliases/simple_mockup.in.yaml "${ALIAS_OUT}")
 
+set(LOCAL_ALIAS "$ENV{HOME}/.config/mc_rtc/aliases/simple_mockup.yaml")
+configure_file(aliases/simple_mockup.in.yaml "${LOCAL_ALIAS}")
+
 set(LOCAL_MODULE "$ENV{HOME}/.config/mc_rtc/modules/simple_mockup.yaml")
 configure_file(modules/simple_mockup.in.yaml "${SIMPLE_MOCKUP_INSTALL_LOCATION}/modules/simple_mockup.yaml")
-
-install(FILES "${ALIAS_OUT}" DESTINATION "${MC_ROBOTS_ALIASES_DIRECTORY}")
