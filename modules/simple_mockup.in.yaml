@@ -25,7 +25,21 @@ collisionObjects:
       width: 0.65
       height: 0.72 # top of the highest bar
       depth: 0.62
+  TopCylinder: &cylinder
+    - base_link
+    - type: cylinder
+      p1: [0, -0.31, 0]
+      p2: [0, 0.31, 0]
+      radius: 0.03
+  MiddleCylinder: *cylinder
+
 collisionTransforms:
   LowerBox:
     translation: [0.9, 0., 0.35]
+    rotation: [1.57, 0, 0]
+  TopCylinder:
+    translation: [0.98, 0, 1.02]
+    rotation: [1.57, 0, 0]
+  MiddleCylinder:
+    translation: [1.08, 0, 1.12]
     rotation: [1.57, 0, 0]
