@@ -62,13 +62,14 @@
         <color rgba="1.0 1.0 1.0 1" />
       </material>
     </visual>
-
   </link>
   <joint name="wall" type="fixed">
     <parent link="base_link" />
     <child link="wall" />
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
   </joint>
+
+
   <link name="TopCylinder">
     <visual>
       <geometry>
@@ -86,6 +87,8 @@
     <child link="TopCylinder" />
     <origin rpy="1.57 0.0 0.0" xyz="0.98 0.0 1.02" />
   </joint>
+
+
   <link name="MiddleCylinder">
     <visual>
       <geometry>
@@ -103,6 +106,27 @@
     <child link="MiddleCylinder" />
     <origin rpy="1.57 0.0 0.0" xyz="1.08 0.0 1.12" />
   </joint>
+
+
+  <link name="CylinderBarTop">
+    <visual>
+      <geometry>
+        <cylinder length="0.18" radius="0.02"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.18" radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="CylinderBarTop" type="fixed">
+    <parent link="base_link" />
+    <child link="CylinderBarTop" />
+    <origin rpy="0.0 1.57 0.0" xyz="1 0.30 1.12" />
+  </joint>
+
+
   <link name="LowerBox">
     <visual>
       <geometry>
