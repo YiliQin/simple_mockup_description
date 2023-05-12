@@ -69,4 +69,55 @@
     <child link="wall" />
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
   </joint>
+  <link name="TopCylinder">
+    <visual>
+      <geometry>
+        <cylinder length="0.62" radius="0.03"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.62" radius="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="TopCylinderJoint" type="fixed">
+    <parent link="base_link" />
+    <child link="TopCylinder" />
+    <origin rpy="1.57 0.0 0.0" xyz="0.98 0.0 1.02" />
+  </joint>
+  <link name="MiddleCylinder">
+    <visual>
+      <geometry>
+        <cylinder length="0.62" radius="0.03"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.62" radius="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="MiddleCylinderJoint" type="fixed">
+    <parent link="base_link" />
+    <child link="MiddleCylinder" />
+    <origin rpy="1.57 0.0 0.0" xyz="1.08 0.0 1.12" />
+  </joint>
+  <link name="LowerBox">
+    <visual>
+      <geometry>
+        <box size="0.65 0.72 0.62"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.65 0.72 0.62"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="LowerBoxJoint" type="fixed">
+    <parent link="base_link" />
+    <child link="LowerBox" />
+    <origin rpy="1.57 0.0 0.0" xyz="0.9 0.0 0.35" />
+  </joint>
 </robot>
