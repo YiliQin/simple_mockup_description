@@ -70,7 +70,7 @@
   </joint>
 
 
-  <link name="TopCylinder">
+  <link name="CylinderTop">
     <visual>
       <geometry>
         <cylinder length="0.62" radius="0.03"/>
@@ -82,14 +82,14 @@
       </geometry>
     </collision>
   </link>
-  <joint name="TopCylinderJoint" type="fixed">
+  <joint name="CylinderTopJoint" type="fixed">
     <parent link="base_link" />
-    <child link="TopCylinder" />
+    <child link="CylinderTop" />
     <origin rpy="1.57 0.0 0.0" xyz="0.98 0.0 1.02" />
   </joint>
 
 
-  <link name="MiddleCylinder">
+  <link name="CylinderMiddle">
     <visual>
       <geometry>
         <cylinder length="0.62" radius="0.03"/>
@@ -101,9 +101,9 @@
       </geometry>
     </collision>
   </link>
-  <joint name="MiddleCylinderJoint" type="fixed">
+  <joint name="CylinderMiddleJoint" type="fixed">
     <parent link="base_link" />
-    <child link="MiddleCylinder" />
+    <child link="CylinderMiddle" />
     <origin rpy="1.57 0.0 0.0" xyz="1.08 0.0 1.12" />
   </joint>
 
